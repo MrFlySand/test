@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" href="highlight.min.css">
+		<script src="highlight.min.js"></script>
+		<!--<script src="highlight.pack.js"></script>-->
+		<script>hljs.initHighlightingOnLoad();</script>
+		<style type="text/css">
+			.code{
+				width: 200px;height: 200px;
+			}
+		</style>
+	</head>
+	<body>	
+		<pre><code class="language-css">
+.search button{
+	width: 5em;height: 2.2em;
+	border-radius: 3px;
+	border-style:ridge;
+	border-color:black;
+}
+		</code></pre>
+		<pre><div class="sequence"></div>
+		<code class="language-js">
+function Queue(){
+	//属性
+	this.items=[];
+	//方法
+	//1. 将元素加入到队列
+	Queue.prototype.enqueue = function(element){
+		this.items.push(element);
+	}
+	//2. 从队列中删除前端元素
+	Queue.prototype.dequeue = function(){
+		return this.items.shift();
+	}
+	//3. 查看前端元素
+	Queue.prototype.front = function(){
+		return this.items[0];
+	}
+	//4. 查看队列是否为空
+	Queue.prototype.isEmpty = function(){
+		return this.items.length==0;
+	}
+	//5. 查看队列中元素的个数
+	Queue.prototype.size = function(){
+		return this.items.length;
+	}
+	//6. toString方法
+	Queue.prototype.toString = function(){
+		var resultString = '';
+		for (var i=0;i &#60; this.items.length;i++) {
+			resultString += this.items[i] + '';
+		}
+		return resultString;
+	}
+}
+		</code></pre>
+	</body>
+</html>
